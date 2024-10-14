@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:graduated_project/components/Custum_text_field.dart';
-import 'package:graduated_project/components/custum_button.dart';
+import 'package:graduated_project/core/components/custum_button.dart';
+import 'package:graduated_project/core/components/custum_text_field.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -47,9 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                  ),
                 const SizedBox(height: 50,),
                  CustumBotton(text: 'Log In')
-                 
-                 
-            
+
           ],
         ),
       ),
