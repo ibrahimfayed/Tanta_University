@@ -8,7 +8,6 @@ void main() {
   runApp(const Tanta_University());
 }
 
-
 class Tanta_University extends StatelessWidget {
   const Tanta_University({super.key});
 
