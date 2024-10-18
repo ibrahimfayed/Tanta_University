@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:graduated_project/config/routes_manager/routes.dart';
-import 'package:graduated_project/core/components/custum_button.dart';
-import 'package:graduated_project/core/components/custum_dropdown.dart';
-import 'package:graduated_project/core/components/custum_text_field.dart';
+import 'package:graduated_project/core/components/custom_button.dart';
+import 'package:graduated_project/core/components/custom_dropdown.dart';
+import 'package:graduated_project/core/components/custom_text_field.dart';
 import 'package:graduated_project/core/utils/assets_manager.dart';
 
 class LoginPage extends StatefulWidget {
@@ -16,16 +16,16 @@ class _LoginPageState extends State<LoginPage> {
   String? password;
   var formKey = GlobalKey<FormState>();
   final List<String> items = [
-    'عضو هيئة تدريس',
-    'طالب دراسات عليا',
-    'طالب بكالوريوس / ليسانس',
+    'faculty member',
+    'postgraduate student',
+    'bachelor/licentiate student',
   ];
   String? selectedValue;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.yellow,
       body: Center(
         child: Form(
           key: formKey,
@@ -42,10 +42,10 @@ class _LoginPageState extends State<LoginPage> {
                 height: 50,
               ),
 
-              CustumDropdown(
+              CustomDropdown(
                 items: items,
               ),
-              // CustumFormTextField(
+              // CustomFormTextField(
               //  onChanged: (data){
               //    email = data;
               //  },
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 20,
               ),
-              CustumFormTextField(
+              CustomFormTextField(
                 validate: (value) {
                   if (value == null || value.isEmpty) {
                     return 'field is requied';
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 50,
               ),
-              CustumBotton(
+              CustomBotton(
                 text: 'تسجيل الدخول',
                 onTap: () {
                   if (formKey.currentState!.validate()) {

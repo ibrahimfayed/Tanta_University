@@ -2,8 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 //i seperate it because i will use it a lot of times
-class CustumBotton extends StatelessWidget {
-  CustumBotton({super.key, this.onTap, required this.text});
+class CustomBotton extends StatelessWidget {
+  CustomBotton({super.key, this.onTap, required this.text});
 
   VoidCallback?
       onTap; //i make it as variable because i may use it in another places
